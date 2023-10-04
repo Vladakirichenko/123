@@ -1,0 +1,31 @@
+.table {
+    width: 870px;
+    margin: auto;
+    color: #726969;
+    font-weight: 700;
+    font-size: 16px;
+    border-collapse: collapse;
+
+}
+
+th {
+    padding: 10px;
+}
+
+td {
+    text-align: center;
+    padding: 10px 40px;
+}
+
+tr:nth-child(even) {
+    background-color: #D9D9D9;
+    color: #fff;
+}
+tr:nth-child(odd) {
+    background-color: #3CD78C;
+}
+
+.icon-table {
+    color: #000;
+    font-size: 20px;
+}
