@@ -1,9 +1,11 @@
 .input {
     width: 277px;
     height: 56px;
-    border: none;
     margin-bottom: 45px;
     background: #D9D9D9;
+    position: relative;
+    border: none;
+    outline: none;
 }
 
 .input::placeholder {
@@ -12,3 +14,4 @@
     font-weight: 600;
     padding: 20px;
 }
+
