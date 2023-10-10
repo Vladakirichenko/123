@@ -3,8 +3,8 @@ import './Input.css'
 
 const Input = props => {
     return (
-        <div>
-            <input className={props.class} type={props.type} placeholder={props.placeholder}/>
+        <div className="input-wrap">
+            <input onChange={props.handler}  className={props.class} type={props.type} placeholder={props.placeholder} id={props.id}/>
         </div>
     )
 }

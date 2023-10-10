@@ -1,4 +1,4 @@
-.card-wrap {
+.form {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -24,4 +24,26 @@
     top: 15px;
     right: 15px;
     cursor: pointer;
+}
+
+.input-wrap small {
+    display: block;
+    margin: 0;
+    position: absolute;
+    top: 60px;
+    left: 0px;
+    color: red;
+    visibility: hidden;
+}
+
+.input-wrap.success input {
+    border: 2px  solid green;
+}
+
+.input-wrap.error input {
+    border: 2px  solid red;
+}
+
+.input-wrap.error small {
+    visibility: visible;
 }
