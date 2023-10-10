@@ -28,14 +28,14 @@ const Card = () => {
         
     }
 
-    const emailSet = (e) => {
+    const handleChangeEmail = (e) => {
         setEmail(e.target.value)
         if (e.target.value) {
             setClassName('input-wrap')
         } 
     }
 
-    const passSet = (e) => {
+    const handleChangePassword = (e) => {
         setPassword(e.target.value)
         if (e.target.value) {
             setClassName('input-wrap')
@@ -48,10 +48,10 @@ const Card = () => {
                 <form className="form">
                     <a className="logo"><img src={img}/></a>
                     <div className={className}>
-                        <Input handler={emailSet} type='text' placeholder='User name' class='input' id='email'/> 
+                        <Input handler={handleChangeEmail} type='text' placeholder='User name' class='input' id='email'/> 
                     </div>
                     <div className={className} >
-                        <Input handler={passSet} type='password' placeholder='Password' class='input' id='password'/>
+                        <Input handler={handleChangePassword} type='password' placeholder='Password' class='input' id='password'/>
                         <small className="error-massage">Wrong password or email</small>
                         <IoEyeSharp className="input-icon"/>
                     </div>
