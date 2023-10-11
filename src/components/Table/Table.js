@@ -1,6 +1,6 @@
 import React from "react";
 import './Table.css';
-import DATA from './DATA'
+import DATA from '../../DATA'
 import {IoTrashSharp, IoPencilSharp} from 'react-icons/io5'
  
 const Table = () => {

@@ -4,7 +4,7 @@ import Card from '../../components/Card/Card';
 const  Login = () => {
   return (
     <div className="Login">
-        <Card/>
+      <Card/>
     </div>
   );
 }
