@@ -1,11 +1,22 @@
 import React from "react";
+import { useState, useEffect } from "react";
 import './Table.css';
-import DATA from '../../DATA'
 import {IoTrashSharp, IoPencilSharp} from 'react-icons/io5'
  
 const Table = () => {
+    const [data, setData] = useState([])
+    useEffect(() => {
+        getData()
+    }, [])
 
-    const data = DATA.map(item => {
+    const getData = async () => {
+        const response = await fetch('https://652923b655b137ddc83e429b.mockapi.io/DATA')
+        const data = await response.json()
+
+        setData(data)
+    }
+
+    const tableData = data.map(item => {
         return (
             <tr>
                 <td>{item.id}</td>
@@ -29,7 +40,7 @@ const Table = () => {
                         <th>Price</th>
                         <th></th>
                     </tr>
-                    {data}
+                    {tableData}
                 </tbody>
             </table>
         </div>
