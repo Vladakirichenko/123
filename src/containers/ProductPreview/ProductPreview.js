@@ -1,6 +1,6 @@
 import './ProductPreview.css';
 import { useState, useEffect } from 'react';
-import logo from '../../assets/logoWhite.png'
+import logo from '../../assets/logoWhite.png';
 import ProductCardItem from '../../components/ProductCardItem/ProductCardItem';
 
 
@@ -19,12 +19,12 @@ const  ProductPreview = () => {
 
     const cardItem = data.map((item) => {
         return (
-        <ProductCardItem
-            img={item.img}
-            name={item.Name}
-            price={item.Price}
-            quantity={item.Quantity}
-        />
+            <ProductCardItem
+                img={item.img}
+                name={item.Name}
+                price={item.Price}
+                quantity={item.Quantity}
+            />
         )
     })
     return (
