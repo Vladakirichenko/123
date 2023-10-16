@@ -1,4 +1,5 @@
 import {useState} from "react";
+import { useNavigate } from "react-router-dom";
 import './Card.css'
 import Input from "../Input/Input";
 import Button from "../Button/Button";
@@ -11,18 +12,17 @@ const data = {
 }
 
 const Card = () => {
-
+    const navigate = useNavigate()
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [className, setClassName] = useState('input-wrap')
     const [isPasswordShown, setIsPasswordShown] = useState(false);
-    const [isLogged, setIsLogged] = useState(false)
 
     const loginUser = (e) => {
         e.preventDefault()
         if (email == data.email && password == data.password) {
             localStorage.setItem('token', 'eyJhbGciOiJIUzI1NiIs')
-            setClassName('input-wrap success')
+            navigate('/ProductsTable')
         } else {
             setClassName('input-wrap error')
         }

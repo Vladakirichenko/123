@@ -2,9 +2,11 @@ import './ProductPreview.css';
 import { useState, useEffect } from 'react';
 import logo from '../../assets/logoWhite.png';
 import ProductCardItem from '../../components/ProductCardItem/ProductCardItem';
+import { Navigate, useNavigate } from 'react-router-dom';
 
 
 const  ProductPreview = () => {
+    const navigate = useNavigate()
     const [data, setData] = useState([])
     useEffect(() => {
         getData()
@@ -20,6 +22,7 @@ const  ProductPreview = () => {
     const cardItem = data.map((item) => {
         return (
             <ProductCardItem
+                showProductItem = {() => navigate(`/productsPreview/:${item.id}`)}
                 img={item.img}
                 name={item.Name}
                 price={item.Price}
