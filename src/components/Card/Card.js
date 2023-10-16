@@ -3,7 +3,7 @@ import './Card.css'
 import Input from "../Input/Input";
 import Button from "../Button/Button";
 import img from "../../assets/logo.png";
-import {IoEyeSharp} from 'react-icons/io5';
+import {IoEyeSharp, IoEyeOffSharp} from 'react-icons/io5';
 
 const data = {
     password: 'password',
@@ -15,6 +15,7 @@ const Card = () => {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [className, setClassName] = useState('input-wrap')
+    const [isPasswordShown, setIsPasswordShown] = useState(false);
     const [isLogged, setIsLogged] = useState(false)
 
     const loginUser = (e) => {
@@ -51,9 +52,11 @@ const Card = () => {
                         <Input handler={handleChangeEmail} type='text' placeholder='User name' class='input' id='email'/> 
                     </div>
                     <div className={className} >
-                        <Input handler={handleChangePassword} type='password' placeholder='Password' class='input' id='password'/>
+                        <Input handler={handleChangePassword} type={isPasswordShown ? 'text' : 'password'} placeholder='Password' class='input' id='password'/>
                         <small className="error-massage">Wrong password or email</small>
-                        <IoEyeSharp className="input-icon"/>
+                        {!isPasswordShown
+                            ? <IoEyeSharp onClick={() => setIsPasswordShown(true)} className="input-icon"/> 
+                            : <IoEyeOffSharp onClick={() => setIsPasswordShown(false)} className="input-icon"/>}   
                     </div>
                     <Button login={loginUser} name='Login'/>
                 </form>
