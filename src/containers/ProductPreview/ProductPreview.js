@@ -22,7 +22,7 @@ const  ProductPreview = () => {
     const cardItem = data.map((item) => {
         return (
             <ProductCardItem
-                showProductItem = {() => navigate(`/productsPreview/:${item.id}`)}
+                showProductItem = {() => navigate(`/products-preview/:${item.id}`)}
                 img={item.img}
                 name={item.Name}
                 price={item.Price}

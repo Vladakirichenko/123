@@ -22,7 +22,7 @@ const Card = () => {
         e.preventDefault()
         if (email == data.email && password == data.password) {
             localStorage.setItem('token', 'eyJhbGciOiJIUzI1NiIs')
-            navigate('/ProductsTable')
+            navigate('/Products-table')
         } else {
             setClassName('input-wrap error')
         }

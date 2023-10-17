@@ -13,9 +13,9 @@ const AppRouter = () => (
                 <Route path="/login" element={<Login/>}/>
 
                 <Route element={<PrivateRoute/>}>
-                    <Route path="/productsTable" element={<ProductsTable/>}/>
-                    <Route path="/productsPreview" element={<ProductPreview/>}/>
-                    <Route path="/productsPreview/:productId" element={<Product/>}/>
+                    <Route path="/products-table" element={<ProductsTable/>}/>
+                    <Route path="/products-preview" element={<ProductPreview/>}/>
+                    <Route path="/products-preview/:productId" element={<Product/>}/>
                 </Route>
 
                 <Route path="*" element={<div> 404 not found  </div>}/>

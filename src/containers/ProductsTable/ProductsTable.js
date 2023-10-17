@@ -10,7 +10,7 @@ const  ProductsTable = () => {
     <div className="ProductsTable">
         <a><img className='logoWhite' src={logo}/></a>
         <div className='btns-wrap'>
-            <Link to='/productsPreview'><BtnGhost icon={<IoPersonOutline className='icon'/>} name='Preview'/></Link>
+            <Link to='/products-preview'><BtnGhost icon={<IoPersonOutline className='icon'/>} name='Preview'/></Link>
             <BtnGhost icon={<IoAdd className='icon'/>} name='Add product'/>
         </div>
         <h1 className='table-title'>
