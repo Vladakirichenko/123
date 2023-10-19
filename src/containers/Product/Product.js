@@ -1,11 +1,15 @@
-import { useParams } from "react-router-dom"
+import './Product.css'
+import logo from '../../assets/logoWhite.png'
+import ProductCardInfo from "../../components/ProductCardInfo/ProductCardInfo"
 
-const Product = () => {
-    let { productId } = useParams()
+const Product = props => {
     return (
-        <div>
-            {`Chosen product is ${productId}`}
-        </div>
+        <>
+            <div className="logo-wrap">
+                <img src={logo}/>
+            </div>
+            <ProductCardInfo/>
+        </>
     )
 }
 
