@@ -2,6 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import './Table.css';
 import {IoTrashSharp, IoPencilSharp} from 'react-icons/io5'
+import { API_URL } from "../../assets/constans";
  
 const Table = () => {
     const [data, setData] = useState([])
@@ -10,7 +11,7 @@ const Table = () => {
     }, [])
 
     const getData = async () => {
-        const response = await fetch('https://652923b655b137ddc83e429b.mockapi.io/DATA')
+        const response = await fetch(API_URL)
         const data = await response.json()
 
         setData(data)

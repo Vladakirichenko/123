@@ -18,7 +18,7 @@ const AppRouter = () => (
                     <Route path="/products-preview/:productId" element={<Product/>}/>
                 </Route>
 
-                <Route path="*" element={<div> 404 not found  </div>}/>
+                <Route path="*" element={<div> 404 not found </div>}/>
             </Routes>
         </BrowserRouter>
     </>
