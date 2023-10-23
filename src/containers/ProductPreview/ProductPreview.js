@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import logo from '../../assets/logoWhite.png';
 import ProductCardItem from '../../components/ProductCardItem/ProductCardItem';
 import { Navigate, useNavigate } from 'react-router-dom';
+import { API_URL } from '../../assets/constans';
 
 
 const  ProductPreview = () => {
@@ -13,7 +14,7 @@ const  ProductPreview = () => {
     }, [])
 
     const getData = async () => {
-        const response = await fetch('https://652923b655b137ddc83e429b.mockapi.io/DATA')
+        const response = await fetch(API_URL)
         const data = await response.json()
 
         setData(data)

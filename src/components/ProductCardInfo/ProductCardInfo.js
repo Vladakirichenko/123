@@ -2,6 +2,7 @@ import './ProductCardInfo.css'
 import { FaLongArrowAltLeft, FaGetPocket } from "react-icons/fa";
 import { useEffect, useState } from 'react';
 import { useParams,useNavigate } from "react-router-dom"
+import { API_URL } from '../../assets/constans'
 
 const ProductCardInfo = props => {
     let { productId } = useParams()
@@ -12,7 +13,7 @@ const ProductCardInfo = props => {
     }, [])
 
     const getData = async () => {
-        const response = await fetch('https://'+`652923b655b137ddc83e429b.mockapi.io/DATA/${productId}`.replace(':', ''))
+        const response = await fetch(`${API_URL}${productId}`)
         const res = await response.json()
 
         setData(res)
@@ -44,3 +45,7 @@ const ProductCardInfo = props => {
 }
 
 export default ProductCardInfo;
+
+
+
+
