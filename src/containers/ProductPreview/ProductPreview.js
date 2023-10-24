@@ -14,7 +14,7 @@ const  ProductPreview = () => {
     }, [])
 
     const getData = async () => {
-        const response = await fetch(API_URL)
+        const response = await fetch(`${API_URL}/DATA`)
         const data = await response.json()
 
         setData(data)

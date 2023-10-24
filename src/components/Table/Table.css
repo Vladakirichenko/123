@@ -5,7 +5,6 @@
     font-weight: 700;
     font-size: 16px;
     border-collapse: collapse;
-
 }
 
 th {
@@ -28,4 +27,5 @@ tr:nth-child(odd) {
 .icon-table {
     color: #000;
     font-size: 20px;
+    cursor: pointer;
 }
