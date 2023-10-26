@@ -1,1 +1,1 @@
-export const API_URL = 'https://652923b655b137ddc83e429b.mockapi.io/DATA/'
+export const API_URL = 'https://652923b655b137ddc83e429b.mockapi.io'

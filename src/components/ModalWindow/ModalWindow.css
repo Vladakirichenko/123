@@ -1,0 +1,49 @@
+body {
+    position: relative;
+}
+
+.Modal-wrap {
+    border: 1px solid rgb(188, 188, 188);
+    background-color: #fff;
+    padding: 25px 40px ;
+    width: 320px;
+    position: absolute;
+    top: 50%;
+    left: 650px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.Modal-wrap p {
+    color: #05BC52;
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 25px;
+    margin-top: 25px;
+}
+
+.x-btn {
+    position: absolute;
+    top: 15px;
+    left: 13px;
+    cursor: pointer;
+}
+
+.btn-modal {
+    border: none;
+    width: 115px;
+    height: 40px;
+    font-size: 18px;
+    color: #fff;
+    font-weight: 700;
+    border-radius: 10px;
+}
+
+.delete {
+    background-color: red;
+    margin-left: 20px;
+}
+
+.cancel {
+    background-color: #b1b1b1;
+}

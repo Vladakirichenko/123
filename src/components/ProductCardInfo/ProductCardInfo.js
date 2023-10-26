@@ -13,7 +13,7 @@ const ProductCardInfo = props => {
     }, [])
 
     const getData = async () => {
-        const response = await fetch(`${API_URL}${productId}`)
+        const response = await fetch(`${API_URL}/DATA/${productId}`)
         const res = await response.json()
 
         setData(res)
