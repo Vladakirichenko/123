@@ -3,7 +3,7 @@ import './BtnGhost.css'
 
 const BtnGhost = props => {
     return (
-        <div className="btn-wrap">
+        <div onClick={props.action} className="btn-wrap">
             <button className="btnGhost">
                 {props.icon}
                 {props.name}
