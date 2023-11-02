@@ -13,19 +13,19 @@ const Form = ({formData, onChangeInput, addData, name, close, nameBtn}) => {
                 <div className='inputs-wrap'>
                     <div className='input-wrap'>
                         <label >Category</label>
-                        <input type='text' name='Category' value={formData.Category} onChange={onChangeInput} />
+                        <input required type='text' name='Category' value={formData.Category} onChange={onChangeInput} />
                     </div>
                     <div className='input-wrap'>
                         <label >Name</label>
-                        <input type='text' name='Name' onChange={onChangeInput} value={formData.Name}/>
+                        <input required type='text' name='Name' onChange={onChangeInput} value={formData.Name}/>
                     </div>
                     <div className='input-wrap'>
                         <label >Quantity</label>
-                        <input type='number' name='Quantity' onChange={onChangeInput} value={formData.Quantity}/>
+                        <input required type='number' name='Quantity' onChange={onChangeInput} value={formData.Quantity}/>
                     </div>
                     <div className='input-wrap'>
                         <label >Price</label>
-                        <input type='number' name='Price' onChange={onChangeInput} value={formData.Price}/>
+                        <input required  type='number' name='Price' onChange={onChangeInput} value={formData.Price}/>
                     </div>
                     <div className='input-wrap'>
                         <label>Description</label>
@@ -34,7 +34,7 @@ const Form = ({formData, onChangeInput, addData, name, close, nameBtn}) => {
                 </div>
                 <div className='btn-wrap'>
                     <button onClick={close} className='btn-modal'>Cancel</button>
-                    <button onClick={addData} className='btn-modal'>{nameBtn}</button>
+                    <button onSubmit={addData} className='btn-modal'>{nameBtn}</button>
                 </div>
 
             </form>
