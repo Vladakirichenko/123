@@ -45,7 +45,7 @@ const Card = () => {
 
     return (
         <div className="card">
-            <div className="card-wrap">
+            <div className="card-wrapp">
                 <form className="form">
                     <a className="logo"><img src={img}/></a>
                     <div className={className}>
